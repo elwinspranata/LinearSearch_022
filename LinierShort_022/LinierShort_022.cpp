@@ -20,14 +20,37 @@ void input()
 	}
 
 	// Accept array elements 
-	cout << "\n-------------------------\n"; 
-	cout << " Enter array elements \n"; 
-	cout << "----------------------\n"; 
+	cout << "\n-------------------------\n";
+	cout << " Enter array elements \n";
+	cout << "----------------------\n";
 	for (i = 0; i < n; i++)
 	{
-		cout << "<" << (i + i) << "> "; 
-		cin >> arr[i]; 
+		cout << "<" << (i + i) << "> ";
+		cin >> arr[i];
+	}
+}
+void linearSearch()
+{
+	char ch; 
+	int comparison; //Number of comparisons 
 
+	do           // Langkah 3 
+	{
+		// Accept the number to be searched 
+		cout << "\nEnter the elements you want to search: "; // Langkah 1 
+		int item; 
+		cin >> item; 
+
+		comparison = 0; 
+		for (i = 0; i < n; i++)
+		{
+			comparison++;
+			if (arr[i] == item)
+			{
+				cout << "\n" << item << " found at position " << (i + 1) << endl
+					break;
+			}
+		} 
 
 	}
 }
