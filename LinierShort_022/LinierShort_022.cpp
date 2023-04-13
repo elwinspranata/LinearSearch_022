@@ -31,26 +31,41 @@ void input()
 }
 void linearSearch()
 {
-	char ch; 
+	char ch;
 	int comparison; //Number of comparisons 
 
 	do           // Langkah 3 
 	{
 		// Accept the number to be searched 
 		cout << "\nEnter the elements you want to search: "; // Langkah 1 
-		int item; 
-		cin >> item; 
+		int item;
+		cin >> item;
 
-		comparison = 0; 
+		comparison = 0;
 		for (i = 0; i < n; i++)
 		{
 			comparison++;
 			if (arr[i] == item)
 			{
-				cout << "\n" << item << " found at position " << (i + 1) << endl
+				cout << "\n" << item << " found at position " << (i + 1) << endl;
 					break;
 			}
-		} 
+		}
 
-	}
-}
+		if (i == n)
+			cout << "\n" << item << " not found in the array\n";
+		cout << "\nNumber of comparisons : " << comparison << endl;
+
+		cout << "\nContinue search (y/n): ";
+		cin >> ch;
+	} while ((ch == 'y') || (ch == 'y'));
+} 
+
+
+int main()
+{
+	input();
+	linearSearch();
+} 
+
+	
